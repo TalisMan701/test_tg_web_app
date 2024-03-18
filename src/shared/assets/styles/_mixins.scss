@@ -1,0 +1,82 @@
+@import 'colors';
+@import 'variables';
+
+//Media
+
+// Media
+@mixin media($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mediaLaptop {
+  @media screen and (max-width: ($laptop - 1)) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+  @media screen and (max-width: ($tablet)) {
+    @content;
+  }
+}
+
+@mixin mediaSTablet {
+  @media screen and (max-width: ($s-tablet)) {
+    @content;
+  }
+}
+
+@mixin mediaLPhone {
+  @media screen and (max-width: ($l-mobile)) {
+    @content;
+  }
+}
+
+@mixin mediaMPhone {
+  @media screen and (max-width: ($m-mobile)) {
+    @content;
+  }
+}
+
+@mixin mediaSPhone {
+  @media screen and (max-width: ($s-mobile)) {
+    @content;
+  }
+}
+
+// # Helpers
+@mixin flex ($d, $ff, $jus, $al) {
+  display: $d;
+  flex-flow: $ff;
+  justify-content: $jus;
+  align-items: $al;
+}
+
+@mixin square($size, $radius: 0) {
+  width: $size;
+  height: $size;
+
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+// hidden scrollbar
+@mixin scrollbarHidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+// Transforms
+@mixin transition($prop: all, $duration: 0.2s, $function: ease-in-out, $delay: 0s) {
+  transition: $prop $duration $function $delay;
+  will-change: $prop;
+}

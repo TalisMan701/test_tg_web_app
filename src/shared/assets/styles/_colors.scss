@@ -1,0 +1,94 @@
+// Colors
+// Neutral
+$black-1: rgba(36, 36, 36, 1);
+$black-2: rgba(44, 44, 44, 1);
+$black-3-70: rgba(58, 58, 58, 0.7);
+$black-4: rgba(97, 97, 97, 1);
+$black-5: rgba(220, 220, 220, 1);
+$black-6: rgba(240, 240, 240, 1);
+
+$white: rgba(251, 251, 251, 1);
+$white-80: rgba(251, 251, 251, 0.8);
+$white-60: rgba(251, 251, 251, 0.6);
+$white-40: rgba(251, 251, 251, 0.4);
+
+// Base
+$orange: rgba(255, 80, 40, 1);
+$orange-dark: rgba(235, 70, 32, 1);
+$orange-10: rgba(255, 80, 40, 0.1);
+$orange-10-invert: rgba(81, 61, 57, 1);
+$red: rgba(246, 7, 7, 1);
+
+// Text
+$text-primary: $black-1;
+$text-link-hover: $orange;
+$text-secondary: $white-60;
+$text-inverse: $white;
+$text-grey: $black-6;
+$text-description: $black-4;
+$text-error: $red;
+$text-input-placeholder: $black-3-70;
+
+// Button
+$button-primary-default-bg: $orange;
+$button-primary-default-border: transported;
+$button-primary-default-color: $white;
+$button-primary-hover-bg: $white;
+$button-primary-hover-border: $orange;
+$button-primary-hover-color: $orange;
+
+$button-secondary-default-bg: $white;
+$button-secondary-default-border: $white;
+$button-secondary-default-color: $orange;
+$button-secondary-hover-bg: $white;
+$button-secondary-hover-border: $orange;
+$button-secondary-hover-color: $orange;
+
+$button-ghost-default-bg: $orange-10;
+$button-ghost-default-border: transported;
+$button-ghost-default-color: $orange;
+$button-ghost-hover-bg: $orange-10;
+$button-ghost-hover-border: $orange;
+$button-ghost-hover-color: $orange;
+
+$button-outline-default-border: $orange;
+$button-outline-default-color: $orange;
+$button-outline-hover-bg: $orange-10;
+$button-outline-hover-border: $orange;
+$button-outline-hover-color: $orange;
+
+// Background
+$background-primary: $white;
+$background-secondary: $orange;
+$background-dark: $black-2;
+$background-card-dark: $black-3-70;
+$background-card: $black-6;
+
+// tab
+$tab-default-default-bg: $black-6;
+$tab-default-hover-bg: $black-6;
+
+$tab-selected-default-default-bg: $orange;
+$tab-selected-default-hover-bg: $orange;
+
+$tab-folder-default-bg: $white;
+$tab-folder-hover-bg: $white;
+
+// border
+$border-error: $red;
+$border-hover: $orange;
+$border-focus: $orange-10;
+
+// checkbox
+$checkbox-default-bg: $orange;
+$checkbox-default-border-color: $white-60;
+$checkbox-default-color: $white-60;
+$checkbox-hover-border-color: $orange;
+$checkbox-hover-color: $white-60;
+
+// radio-button
+$radio-button-default-bg: $orange;
+$radio-button-default-border-color: $white-60;
+$radio-button-default-color: $white-60;
+$radio-button-hover-border-color: $orange;
+$radio-button-hover-color: $white-60;
