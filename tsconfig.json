@@ -6,6 +6,8 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    "allowImportingTsExtensions": true,
+
     /* Bundler mode */
     "moduleResolution": "Node",
     "resolveJsonModule": true,
@@ -30,7 +32,7 @@
       "~shared/*": ["./src/shared/*"],
       "~widgets/*": ["./src/widgets/*"],
     },
-    "types": ["vite-plugin-svgr/client", "node"],
+
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
