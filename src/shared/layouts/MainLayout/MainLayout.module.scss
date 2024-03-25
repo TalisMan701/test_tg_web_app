@@ -1,0 +1,4 @@
+.container{
+  height: calc(var(--vh, 1vh) * 100);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 0%, rgb(242.3040148615837, 239.0625, 255) 100%);
+}

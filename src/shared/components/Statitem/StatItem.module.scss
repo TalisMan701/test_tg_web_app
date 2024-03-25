@@ -1,0 +1,23 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title{
+  color: #777777;
+  font-weight: 400;
+  font-size: $font-size-m;
+}
+
+.stats{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 3px;
+}
+
+.numbers{
+  font-weight: 600;
+  font-size: $font-size-l;
+}

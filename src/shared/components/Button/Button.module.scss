@@ -1,0 +1,106 @@
+.button{
+  $self: &;
+  @include flex(flex, row, center, center);
+  padding: var(--button-padding);
+  height: var(--button-height);
+  background: var(--button-bg);
+  color: var(--button-color);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  outline: 0;
+  gap: 10px;
+  border-radius: $border-radius-btn;
+  border-width: 0px;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: var(--button-font-weight);
+  line-height: normal;
+
+  @include transition;
+
+  &:hover {
+    background: var(--button-hover-bg);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-color);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    background: var(--button-active-bg);
+    border-color: var(--button-active-border-color);
+    color: var(--button-active-color);
+  }
+
+  &:disabled {
+    background: var(--button-disabled-bg);
+    border-color: var(--button-disabled-border-color);
+    color: var(--button-disabled-color);
+    opacity: 0.4;
+    cursor: not-allowed;
+    user-select: none;
+  }
+
+  &--variant {
+    &-primary {
+      --button-bg: #{$button-primary-default-bg};
+      --button-color: #{$button-primary-default-color};
+      --button-border-color: #{$button-primary-default-border};
+
+      --button-hover-bg: #{$button-primary-hover-bg};
+      --button-hover-color: #{$button-primary-hover-color};
+      --button-hover-border-color: #{$button-primary-hover-border};
+
+      --button-active-bg: #{$button-primary-active-bg};
+      --button-active-color: #{$button-primary-active-color};
+      --button-active-border-color: #{$button-primary-active-border};
+
+      --button-disabled-bg: #{$button-primary-default-bg};
+      --button-disabled-color: #{$button-primary-default-color};
+      --button-disabled-border-color: #{$button-primary-default-border};
+    }
+
+    &-secondary {
+      --button-bg: #{$button-secondary-default-bg};
+      --button-color: #{$button-secondary-default-color};
+      --button-border-color: #{$button-secondary-default-border};
+
+      --button-hover-bg: #{$button-secondary-hover-bg};
+      --button-hover-color: #{$button-secondary-hover-color};
+      --button-hover-border-color: #{$button-secondary-hover-border};
+
+      --button-active-bg: #{$button-secondary-hover-bg};
+      --button-active-color: #{$button-secondary-hover-color};
+      --button-active-border-color: #{$button-secondary-hover-border};
+
+      --button-disabled-bg: #{$button-secondary-default-bg};
+      --button-disabled-color: #{$button-secondary-default-color};
+      --button-disabled-border-color: #{$button-secondary-default-border};
+      &:active{
+        font-weight: 700;
+      }
+    }
+  }
+
+  &--size {
+    &-large {
+      --button-padding: 0 74px;
+      --button-height: 80px;
+      --button-font-weight: 700;
+    }
+    &-medium {
+      --button-padding: 0 72px;
+      --button-height: 56px;
+      --button-font-weight: 600;
+    }
+    &-small {
+      --button-padding: 0 68px;
+      --button-height: 40px;
+      --button-font-weight: 500;
+    }
+  }
+}

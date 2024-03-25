@@ -1,0 +1,112 @@
+@mixin animationOpen($opacity: 1, $duration: 0.2s) {
+  visibility: visible;
+  opacity: $opacity;
+  transition: opacity $duration ease, visibility $duration ease, transform $duration ease;
+  transform: translateY(0);
+}
+
+@mixin animationClose() {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s ease;
+  transform: translateY(-12px);
+}
+
+.wrapper {
+  $main: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  &_toDown{
+    align-items: flex-end;
+  }
+
+  &_open {
+    pointer-events: all;
+    visibility: visible;
+
+    .overlay {
+      @include animationOpen(0.5);
+    }
+
+    .body {
+      @include animationOpen();
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  left: -100px;
+  bottom: -100px;
+  z-index: -1;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  backdrop-filter: blur(32px);
+}
+
+.body {
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_full-size {
+    width: 100%;
+  }
+}
+
+.close {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  order: 1;
+  border-radius: 50%;
+  background: transparent;
+  color: #1b284b;
+  border: none;
+  cursor: pointer;
+
+  &_position {
+    &_relative {
+
+    }
+
+    &_absolute {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 1002;
+      &_inTop{
+        top: -44px;
+        right: calc(100% - 60px);
+      }
+    }
+  }
+}
+
+.icon {
+
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}

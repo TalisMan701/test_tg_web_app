@@ -1,0 +1,40 @@
+.checkboxWrapper > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkboxWrapper > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.checkboxWrapper > span::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 4px;
+  border: 1px solid #4C4C4C;
+  background-color: #212E34;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-right: 10px;
+  @include transition;
+}
+
+/* стили при наведении курсора на checkbox */
+.checkboxWrapper>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: rgba($blue, 0.5);
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.checkboxWrapper>input:checked+span::before {
+  border-color: $blue;
+  background-color: $blue;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 10'%3e%3cpath fill='%23fff' d='M9.17803 2.18563C9.35002 2.33852 9.36551 2.60188 9.21263 2.77387L4.76818 7.77387C4.68912 7.86283 4.57578 7.91372 4.45676 7.91372C4.33775 7.91372 4.22441 7.86283 4.14534 7.77387L1.92312 5.27387C1.77024 5.10188 1.78573 4.83852 1.95772 4.68563C2.12972 4.53275 2.39308 4.54824 2.54596 4.72024L4.45676 6.86989L8.58979 2.22024C8.74267 2.04824 9.00603 2.03275 9.17803 2.18563Z'/%3e%3c/svg%3e");
+}
