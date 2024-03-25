@@ -6,7 +6,7 @@ import classes from './Modal.module.scss';
 import {ModalProps} from './Modal.types';
 import {Portal} from '../Portal';
 import {MODAL_PORTAL_ID} from '~shared/config/constants';
-import {CloseIcon} from '~shared/ui/Icons/Close';
+import {PersonOctagon} from '~shared/components/Icons/PersonOctagon';
 
 export const Modal: React.FC<ModalProps> = ({
   isOpen = false,
@@ -16,7 +16,6 @@ export const Modal: React.FC<ModalProps> = ({
   width = 'xl',
   isFullWidth = false,
   contentClassName = '',
-  contentWrapperClassName = '',
   iconPosition = 'absolute',
   toDown = false,
   closeTop = false,
@@ -64,7 +63,7 @@ export const Modal: React.FC<ModalProps> = ({
             })}
             type='button'
           >
-            <CloseIcon className={cx(classes.icon)} width={24} height={24} fill={'#999999'} />
+            <PersonOctagon className={cx(classes.icon)} width={24} height={24} fill={'#999999'} />
           </button>
           <div
             className={cx(
