@@ -14,8 +14,6 @@ body{
     position: relative;
     overflow: clip;
   }
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
 }
 
 p{
@@ -24,6 +22,8 @@ p{
 
 * {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 h1,h2,h3,h4,h5,h6{

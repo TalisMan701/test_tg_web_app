@@ -13,7 +13,7 @@ $white-60: rgba(251, 251, 251, 0.6);
 $white-40: rgba(251, 251, 251, 0.4);
 
 // Base
-$orange: rgba(255, 80, 40, 1);
+$orange: #F0AD2C;
 $orange-dark: rgba(235, 70, 32, 1);
 $orange-10: rgba(255, 80, 40, 0.1);
 $orange-10-invert: rgba(81, 61, 57, 1);
@@ -30,32 +30,56 @@ $text-error: $red;
 $text-input-placeholder: $black-3-70;
 
 // Button
+//primary
 $button-primary-default-bg: $orange;
-$button-primary-default-border: transported;
+$button-primary-default-border: $orange;
 $button-primary-default-color: $white;
-$button-primary-hover-bg: $white;
+
+$button-primary-hover-bg: $orange;
 $button-primary-hover-border: $orange;
-$button-primary-hover-color: $orange;
+$button-primary-hover-color: $white;
 
-$button-secondary-default-bg: $white;
-$button-secondary-default-border: $white;
-$button-secondary-default-color: $orange;
-$button-secondary-hover-bg: $white;
-$button-secondary-hover-border: $orange;
-$button-secondary-hover-color: $orange;
+$button-primary-active-bg: $orange;
+$button-primary-active-border: $orange;
+$button-primary-active-color: $white;
 
+//secondary
+$button-secondary-default-bg: #E8DEFF;
+$button-secondary-default-border: #E8DEFF;
+$button-secondary-default-color: #8D75C5;
+
+$button-secondary-hover-bg: #d5c3ff;
+$button-secondary-hover-border: #d5c3ff;
+$button-secondary-hover-color: #8D75C5;
+
+$button-secondary-active-bg: #d5c3ff;
+$button-secondary-active-border: #d5c3ff;
+$button-secondary-active-color: #8D75C5;
+
+//ghost
 $button-ghost-default-bg: $orange-10;
 $button-ghost-default-border: transported;
 $button-ghost-default-color: $orange;
+
 $button-ghost-hover-bg: $orange-10;
 $button-ghost-hover-border: $orange;
 $button-ghost-hover-color: $orange;
 
+$button-ghost-active-bg: $white;
+$button-ghost-active-border: $orange;
+$button-ghost-active-color: $orange;
+
+//outline
 $button-outline-default-border: $orange;
 $button-outline-default-color: $orange;
+
 $button-outline-hover-bg: $orange-10;
 $button-outline-hover-border: $orange;
 $button-outline-hover-color: $orange;
+
+$button-outline-active-bg: $white;
+$button-outline-active-border: $orange;
+$button-outline-active-color: $orange;
 
 // Background
 $background-primary: $white;

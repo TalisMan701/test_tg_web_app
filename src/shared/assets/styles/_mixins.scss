@@ -63,6 +63,13 @@
   }
 }
 
+@mixin resetUL {
+  list-style: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
 // hidden scrollbar
 @mixin scrollbarHidden {
   &::-webkit-scrollbar {

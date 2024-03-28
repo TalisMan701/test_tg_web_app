@@ -1,0 +1,37 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 10px;
+
+  .count{
+    font-weight: 800;
+    font-size: $font-size-xxl;
+    color: #FFFFFF;
+  }
+
+  &-size-l{
+
+  }
+
+  &-size-m{
+    .count{
+      font-size: $font-size-xl;
+    }
+  }
+
+  &-size-s{
+
+  }
+
+  &-theme-primary{
+
+  }
+
+  &-theme-secondary{
+    .count{
+      color: $orange;
+    }
+  }
+}
+

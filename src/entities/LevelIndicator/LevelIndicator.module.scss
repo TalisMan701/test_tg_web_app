@@ -1,0 +1,14 @@
+.text{
+  font-size: $font-size-m;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.stars{
+  @include resetUL;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
