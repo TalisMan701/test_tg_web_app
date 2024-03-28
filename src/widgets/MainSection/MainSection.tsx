@@ -11,6 +11,7 @@ import {Container} from '~shared/components/Container';
 import BGImage from '~shared/assets/images/bg.jpg';
 import MenLVL1Image from '~shared/assets/images/heroes/men/lvl-1.png';
 import BtnToTrenImage from '~shared/assets/images/btnToTren.png';
+import {NavLink} from 'react-router-dom';
 
 export const MainSection: FC<MainSectionProps> = ({className}) => {
   return (
@@ -30,9 +31,9 @@ export const MainSection: FC<MainSectionProps> = ({className}) => {
           </Button>
         </div>
         <img className={classes.heroImg} src={MenLVL1Image} alt='hero' />
-        <div className={classes.btnToTren}>
+        <NavLink to={'/simulators'} className={classes.btnToTren}>
           <img src={BtnToTrenImage} alt='btnToTren' />
-        </div>
+        </NavLink>
       </Container>
       <div style={{backgroundImage: `url(${BGImage})`}} className={classes.background} />
     </section>
